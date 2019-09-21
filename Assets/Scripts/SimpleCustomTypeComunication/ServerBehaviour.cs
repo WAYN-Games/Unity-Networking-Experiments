@@ -24,7 +24,8 @@ public class ServerBehaviour : MonoBehaviour
             m_Driver.Listen();
 
         m_Connections = new NativeList<NetworkConnection>(16, Allocator.Persistent);
-        cts = new Serializer<CustomType>(); 
+        cts = new Serializer<CustomType>();
+        cts.Initialize();
     }
 
     void OnDestroy()

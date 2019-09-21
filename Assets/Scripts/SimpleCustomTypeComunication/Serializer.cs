@@ -5,10 +5,11 @@ using System.IO;
 using System.IO.Compression;
 using Unity.Collections.LowLevel.Unsafe;
 
-public class Serializer<T> where T : struct
+public struct Serializer<T> where T : struct
 {
     int size;
-    public Serializer()
+    
+    public void Initialize()
     {
         size = UnsafeUtility.SizeOf<T>();
     }

@@ -19,6 +19,7 @@ public class ClientBehaviour : MonoBehaviour
         client_endpoint.Port = 9000;
         m_Connection = m_Driver.Connect(client_endpoint);
         cts = new Serializer<CustomType>();
+        cts.Initialize();
     }
 
     public void OnDestroy()
